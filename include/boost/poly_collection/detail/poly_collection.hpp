@@ -29,6 +29,11 @@
 #include <typeinfo>
 #include <utility>
 
+#ifdef BOOST_MSVC
+#pragma warning(push)
+#pragma warning(disable: 4702)
+#endif
+
 namespace boost{
 
 namespace poly_collection{
@@ -1170,5 +1175,9 @@ void swap(
 } /* namespace poly_collection */
 
 } /* namespace boost */
+
+#ifdef BOOST_MSVC
+#pragma warning(pop)
+#endif
 
 #endif

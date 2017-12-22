@@ -18,6 +18,11 @@
 #include <type_traits>
 #include <utility>
 
+#ifdef BOOST_MSVC
+#pragma warning(push)
+#pragma warning(disable: 4702)
+#endif
+
 namespace boost{
 
 namespace poly_collection{
@@ -292,5 +297,9 @@ private:
 } /* namespace poly_collection */
 
 } /* namespace boost */
+
+#ifdef BOOST_MSVC
+#pragma warning(pop)
+#endif
 
 #endif

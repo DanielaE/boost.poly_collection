@@ -56,7 +56,7 @@ struct derived3:base
 struct another_base
 {
   virtual ~another_base()=default;
-  char x[5];
+  char xx[5];
 };
 
 struct derived4:another_base,derived3
