@@ -236,6 +236,7 @@ void test_scoped_allocator()
 
   p.emplace<vector>();
   auto& s=boost::type_erasure::any_cast<vector&>(*p.begin());
+  (void)s;
   BOOST_TEST(p.get_allocator().root==&roote);
 
 #if BOOST_WORKAROUND(BOOST_MSVC,>=1910)
