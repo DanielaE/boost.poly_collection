@@ -18,6 +18,11 @@
 #include <new>
 #include <utility>
 
+#ifdef BOOST_MSVC
+#pragma warning(push)
+#pragma warning(disable: 4100)
+#endif
+
 namespace boost{
 
 namespace poly_collection{
@@ -98,5 +103,9 @@ struct newdelete_allocator_adaptor:Allocator
 } /* namespace poly_collection */
 
 } /* namespace boost */
+
+#ifdef BOOST_MSVC
+#pragma warning(pop)
+#endif
 
 #endif
